@@ -14,18 +14,26 @@ class Game():
         print(f"negatif sayı söyleyemesin pass geçemesin ve sayı ekleyemesin")
         time.sleep(2)
 
-    def minus(self,player):
+    def minus_player(self,player):
         self.gamenumber -= int(player)
         print(f"||{self.gamenumber}||" + f"{player}")
+
+    def minus_ai(self,ai):
+        self.gamenumber -= int(ai)
+        print(f"||{self.gamenumber}||" + f"{ai}")
 
     def start(self):
         self.loop = True
         while self.loop:
             player = str(input("1 mi yoksa 2 mi çıkaracaksın:   "))
             if player == "1":
-                self.minus(player=player)
+                self.minus_player(player=player)
+                ai = 2
+                self.minus_ai(ai=ai)
             elif player == "2":
-                self.minus(player=player)
+                self.minus_player(player=player)
+                ai = 1
+                self.minus_ai(ai=ai)
             else:
                 print("hatalı oynadın")
 
@@ -40,5 +48,5 @@ class Game():
         self.start()
 
 
-game = Game(25)
+game = Game(26)
 game.start_dev()
