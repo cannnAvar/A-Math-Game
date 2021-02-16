@@ -1,7 +1,6 @@
 import time
 import os
 
-
 class Game():
     def __init__(self, defgamenumber, gamenumber=0) -> int:
         self.defgamenumber = int(defgamenumber)
@@ -15,21 +14,27 @@ class Game():
         print(f"negatif sayı söyleyemesin pass geçemesin ve sayı ekleyemesin")
         time.sleep(2)
 
+    def minus(self,player):
+        self.gamenumber -= int(player)
+        print(f"||{self.gamenumber}||" + f"{player}")
+
     def start(self):
         self.loop = True
         while self.loop:
             player = str(input("1 mi yoksa 2 mi çıkaracaksın:   "))
             if player == "1":
-                pass
+                self.minus(player=player)
             elif player == "2":
-                pass
+                self.minus(player=player)
             else:
                 print("hatalı oynadın")
 
     def start_dev(self):
+        self.gamenumber = self.defgamenumber
         self.start()
 
     def start_with_rules(self):
+        self.gamenumber = self.defgamenumber
         os.system("cls")
         self.rules()
         self.start()
