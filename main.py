@@ -1,5 +1,6 @@
 import time
 import os
+import math
 
 class Game():
     def __init__(self, defgamenumber, gamenumber=0) -> int:
@@ -18,9 +19,10 @@ class Game():
         self.gamenumber -= int(player)
         print(f"||{self.gamenumber}||" + f"{player}")
 
-    def minus_ai(self,ai):
-        self.gamenumber -= int(ai)
-        print(f"||{self.gamenumber}||" + f"{ai}")
+    def ai(self):
+        numb = 
+        self.gamenumber -= int(numb)
+        print(f"||{self.gamenumber}||" + f"{numb}")
 
     def start(self):
         self.loop = True
@@ -28,12 +30,10 @@ class Game():
             player = str(input("1 mi yoksa 2 mi çıkaracaksın:   "))
             if player == "1":
                 self.minus_player(player=player)
-                ai = 2
-                self.minus_ai(ai=ai)
+                
             elif player == "2":
                 self.minus_player(player=player)
-                ai = 1
-                self.minus_ai(ai=ai)
+                
             else:
                 print("hatalı oynadın")
 
