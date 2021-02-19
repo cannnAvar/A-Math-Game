@@ -62,4 +62,4 @@ class Game():
 
 player = str(input("isminiz:    "))
 game = Game(playername=player, defgamenumber=25)
-game.start_dev()
+game.start_with_rules()
