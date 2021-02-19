@@ -32,6 +32,9 @@ class Game():
     def start(self):
         self.loop = True
         while self.loop:
+            if self.gamenumber <= 0:
+                self.loop = False
+                self.finish()
             player = str(input("1 mi yoksa 2 mi çıkaracaksın:   "))
             if player == "1":
                 self.minus_player(player=player)
@@ -53,6 +56,8 @@ class Game():
         os.system("cls")
         self.rules()
         self.start()
+    def finish(self):
+        print("kayıp etin")
 
 
 player = str(input("isminiz:    "))
