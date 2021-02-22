@@ -1,5 +1,7 @@
 # Game
 
-a math game I try to make at python
+A math game I try to make at python
  
-based on Ali Nesin's game
+Based on Ali Nesin's game
+
+I wait your suggestion
