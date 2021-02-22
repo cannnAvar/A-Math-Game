@@ -11,9 +11,11 @@ class Game():
 
     def rules(self):
         print(
-            f"{self.defgamenumber} sayısını her tur 1 veya 2 çıkartarak karşıya 0 dedirmeye çalışacagız")
+            f"{self.defgamenumber} minus 1 or 2 and")
         time.sleep(2)
-        print(f"negatif sayı söyleyemesin pass geçemesin ve sayı ekleyemesin")
+        print("If you say 0 you loose")
+        time.sleep(2)
+        print("you loose")
         time.sleep(2)
 
     def minus_player(self, player):
@@ -35,7 +37,7 @@ class Game():
             if self.gamenumber <= 0:
                 self.loop = False
                 self.finish()
-            player = str(input("1 mi yoksa 2 mi çıkaracaksın:   "))
+            player = str(input("minus 1 or minus2:   "))
             if player == "1":
                 self.minus_player(player=player)
                 self.ai()
@@ -45,7 +47,7 @@ class Game():
                 self.ai()
 
             else:
-                print("hatalı oynadın")
+                print("you play wrong")
 
     def start_dev(self):
         self.gamenumber = self.defgamenumber
@@ -56,10 +58,11 @@ class Game():
         os.system("cls")
         self.rules()
         self.start()
+
     def finish(self):
-        print("kayıp etin")
+        print("you lose")
 
 
-player = str(input("isminiz:    "))
+player = str(input("your name:    "))
 game = Game(playername=player, defgamenumber=25)
 game.start_with_rules()
